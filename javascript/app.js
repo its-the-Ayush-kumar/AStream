@@ -38,7 +38,7 @@ async function loadGallery(){
     }
     else{
         console.log("clip list recieved !");
-        //console.log(response);
+        console.log(response);
         response.forEach(resp => {
             resp = resp.split('.')[0];
             var li = document.createElement('div');

@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 app.get('/video', function(req, res) {
   const clip = req.query.play;
-  const path = 'assets/clips/' + clip + ".mp4";
+  const path = '../assets/clips/' + clip + ".mp4";
   const stat = fs.statSync(path)
   const fileSize = stat.size
   const range = req.headers.range
@@ -47,7 +47,7 @@ app.get('/video', function(req, res) {
 });
 
 app.get('/gallery', function(req, res) {
-    const path = 'assets/clips/';
+    const path = '../assets/clips/';
     fs.readdir(path, (err, files) => {
         if(err){
             console.log(err);
